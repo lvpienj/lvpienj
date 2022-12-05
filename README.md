@@ -3,12 +3,11 @@
 #include <stdlib.h>
 using namespace std;
 
-
 int main ()
 {
 	string name, gender, league, match, date, time;
 	char  genderChoose, again, order, Class;
-	int chooseLeague, chooseLaLigaMatch, economy = 1500000, VIP = 5000000;
+	int chooseLeague, chooseLaLigaMatch, choosePremiereMatch, chooseItaliaMatch, economy = 1500000, VIP = 5000000;
 	
 	do{
 		cout << "************************************************************************************************************" 	<< endl;
@@ -92,6 +91,61 @@ int main ()
 								l = false;
 							}
 							else if (chooseLaLigaMatch == 1) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 2) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 3) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 4) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 5) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 6) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 7) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 8) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 9) {
+								l = false;
+								match = "Girona V Rayo";
+								date = "2022/12/29";
+								time = "23.00 WIB";
+							}
+							else if (chooseLaLigaMatch == 10) {
+								l = false;
 								match = "Girona V Rayo";
 								date = "2022/12/29";
 								time = "23.00 WIB";
@@ -119,6 +173,25 @@ int main ()
 						cout << "|9.	|Man Utd V Nottingham       |2022/12/28 |03.00 WIB  |" << endl;
 						cout << "|10.	|Leeds V Man City           |2022/12/29 |03.00 WIB  |" << endl;
 						cout << "-------------------------------------------------------------" << endl;
+						
+						bool m = true;
+						while (m){
+							cout << "\n" << "Please Choose the match that you want to see" << endl;
+							cin >> choosePremiereMatch;
+							string PremiereStadium[11] = {"", "Gtech Community Stadium", "st. Mary's stadium", "King Power stadium", "Selhurst Park stadium", "Goodison Park","Villa Park", "Emirates stadium", "stamford bridge", "Old Trafford","Elland Road"};
+							if  (choosePremiereMatch >= 0 && choosePremiereMatch <= 11) {
+								m = false;
+							}
+							else if (choosePremiereMatch == 1) {
+								m = false;
+								match = "Brentford V Tottenham";
+								date = "2022/12/26";
+								time = "19.30 WIB";
+							}
+							else {
+								m = true;
+							}
+						}
 					}
 					else if (chooseLeague == 3){
 						k = false;
@@ -138,6 +211,24 @@ int main ()
 						cout << "|9.	|Udinese V Empoli           |2022/01/05	|02.45 WIB  |" << endl;
 						cout << "|10.	|Inter V Napoli             |2022/01/05	|02.45 WIB  |" << endl;
 						cout << "-------------------------------------------------------------" << endl;
+						bool n = true;
+						while (n) {
+							cout << "\n" << "Please Choose the match that you want to see" << endl;
+							cin >> chooseItaliaMatch;
+							string ItaliaStadium[11] = {"", "Stadio Arechi", "Stadio citta del tricola", "Olimpico di Torino", "Alberto Picco", "Stadio Olimpico", "Stadio Comunale Via del Mare", "Stadio Artemio Franchi", "Giovanni Zini Stadium", "Friuli", "San Siro"};
+							if (chooseItaliaMatch){
+								n = false;
+							}
+							else if (chooseItaliaMatch == 1){
+								n = false;
+								match = "";
+								date = "";
+								time = "";
+							}
+							else {
+								n = true;
+							}
+						}
 					}
 					else {
 						k = true;
