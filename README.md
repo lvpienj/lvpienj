@@ -6,7 +6,7 @@ using namespace std;
 
 int main ()
 {
-	string name, gender, league, matchLaLiga, dateLaLiga, timeLaLiga, matchPremiere, datePremiere, timePremiere, matchItalia, dateItalia, timeItalia, price;
+	string name, gender, league, matchLaLiga, dateLaLiga, timeLaLiga, matchPremiere, datePremiere, timePremiere, matchItalia, dateItalia, timeItalia,  price;
 	string LaLigaStadium[11] = {"", "Montilivi", "Benito Villamarin Stadium", "Wanda Metropolitano", "Alfonso Perez", "Balaidos Stadium", "Estadio Nuevo Mirandilla", "Nuevo Jose Zorrilla Stadium", "Camp Nou", "Anoeta Stadium", "Estadio Ciudad de Valencia"};
 	string PremiereStadium[11] = {"", "Gtech Community Stadium", "st. Mary's stadium", "King Power stadium", "Selhurst Park stadium", "Goodison Park","Villa Park", "Emirates stadium", "stamford bridge", "Old Trafford","Elland Road"};
 	string ItaliaStadium[11] = {"", "Stadio Arechi", "Stadio citta del tricola", "Olimpico di Torino", "Alberto Picco", "Stadio Olimpico", "Stadio Comunale Via del Mare", "Stadio Artemio Franchi", "Giovanni Zini Stadium", "Friuli", "San Siro"};
