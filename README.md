@@ -1,6 +1,7 @@
 #include <iostream>	
 #include <string>
-#include <stdlib.h>
+#include <ctime>
+
 using namespace std;
 
 int main ()
@@ -354,8 +355,8 @@ int main ()
 				}
 					
 					//Choose Class
-					do {
-						bool q = true;
+					bool q = true;
+					// while(q) {
 						while (q) {
 							
 							cout << "What class do you want to choose?" << endl;
@@ -366,7 +367,7 @@ int main ()
 							
 							Class = tolower(Class);
 							if (Class == 'e') {
-								q = false;
+								// q = false;
 								bool o = true;
 								while (o) {
 									cout << "Your price for this ticket would be  IDR1.500.000" << endl;
@@ -374,20 +375,25 @@ int main ()
 									cin >> chooseEconomy; system ("cls");
 									chooseEconomy = tolower(chooseEconomy);
 									if (chooseEconomy == 'y') {
-										o = false;
 										price = "1.500.000";
+										o = false;
+										q = false;
+										break;
 									}
 									else if (chooseEconomy == 'n'){
 										o = false;
+										// break;
 									}
 									else {
-										o = true;
+										// o = true;
 										cout << "Please input the right input!" << endl;
 									}
+									// break;
 								}
+								// break;
 							}
 							else if (Class == 'v'){
-								q = false;
+								// q = false;
 								bool p = true;
 								while (p) {
 									cout << "Your price for this ticket would be  IDR5.000.000" <<  endl;
@@ -395,24 +401,28 @@ int main ()
 									cin >> chooseVIP; system ("cls");
 									chooseVIP = tolower(chooseVIP);
 									if (chooseVIP == 'y') {
-										p = false;
 										price = "5.000.000";
+										p = false;
+										q = false;
+										break;
 									}
 									else if (chooseVIP == 'n') {
 										p = false;
+										// break;
 									}
 									else {
 										p = true;
 										cout << "Please input the right input!" << endl;
 									}
+									// break;
 								}
+								// break;
 							}
 							else {
 								q = true;
 								cout << "Please input the right input!" << endl;
 							}
 						}
-					} while (chooseEconomy == 'n' || chooseVIP == 'n');
 					
 					//The Summarry
 					cout << "Here are the data of your ticket!" << endl;
@@ -424,6 +434,11 @@ int main ()
 					cout << "Time      : " << timeLaLiga << timePremiere << timeItalia << endl;
 					cout << "Price     : " << "IDR" << price << endl; 
 					cout << "Stadium   : " << LaLigaStadium[chooseLaLigaMatch] << PremiereStadium[choosePremiereMatch] << ItaliaStadium[chooseItaliaMatch] << endl;
+					
+					time_t currtime = time (0);
+					char *mytime = ctime(&currtime);
+					cout << "\n" << "Current Date and Time " << endl;
+					cout << mytime << endl;
 					
 					
 					cout << "\n" << "Do you want to order the ticket again? (y/n)"; 
