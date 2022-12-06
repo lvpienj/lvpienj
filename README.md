@@ -13,7 +13,6 @@ int main ()
 	char  genderChoose, again, order;
 	char chooseEconomy;
 	char chooseVIP;
-	char ticketClass;
 	char Class;
 	int chooseLeague;
 	int chooseLaLigaMatch = 0;
@@ -96,7 +95,7 @@ int main ()
 							cout << "|9.	|Real Sociedad V Osasuna  |2022/12/31	|22.15 WIB  |" << endl;
 							cout << "|10.	|Villarreal V Valencia    |2022/12/31	|22.15 WIB  |" << endl;
 							cout << "-------------------------------------------------------------" << endl;
-							cout << "\n" << "Please Choose the match that you want to see" << endl;
+							cout << "\n" << "Please Choose the match that you want to see [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" << endl;
 							cin >> chooseLaLigaMatch;
 							system ("cls");
 							
@@ -186,7 +185,7 @@ int main ()
 							cout << "|9.	|Man Utd V Nottingham       |2022/12/28 |03.00 WIB  |" << endl;
 							cout << "|10.	|Leeds V Man City           |2022/12/29 |03.00 WIB  |" << endl;
 							cout << "-------------------------------------------------------------" << endl;
-							cout << "\n" << "Please Choose the match that you want to see" << endl;
+							cout << "\n" << "Please Choose the match that you want to see [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" << endl;
 							cin >> choosePremiereMatch;
 							system ("cls");
 							
@@ -278,7 +277,7 @@ int main ()
 							cout << "|10.	|Inter V Napoli             |2022/01/05	|02.45 WIB  |" << endl;
 							cout << "-------------------------------------------------------------" << endl;
 							
-							cout << "\n" << "Please Choose the match that you want to see" << endl;
+							cout << "\n" << "Please Choose the match that you want to see [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" << endl;
 							cin >> chooseItaliaMatch;
 							system ("cls");
 							
@@ -356,73 +355,61 @@ int main ()
 					
 					//Choose Class
 					bool q = true;
-					// while(q) {
-						while (q) {
+					while (q) {	
+						cout << "What class do you want to choose?" << endl;
+						cout << "Class ([E]conomy / [V]IP)	:"; 
+						cin >> Class;
+						system ("cls");
 							
-							cout << "What class do you want to choose?" << endl;
-							cout << "Class ([E]conomy / [V]IP)	:"; 
-							cin >> ticketClass;
-							Class = ticketClass;
-							system ("cls");
-							
-							Class = tolower(Class);
-							if (Class == 'e') {
-								// q = false;
-								bool o = true;
-								while (o) {
-									cout << "Your price for this ticket would be  IDR1.500.000" << endl;
-									cout << "Are you sure want to choose economy class? [y/n]" << endl;
-									cin >> chooseEconomy; system ("cls");
-									chooseEconomy = tolower(chooseEconomy);
-									if (chooseEconomy == 'y') {
-										price = "1.500.000";
-										o = false;
-										q = false;
-										break;
-									}
-									else if (chooseEconomy == 'n'){
-										o = false;
-										// break;
-									}
-									else {
-										// o = true;
-										cout << "Please input the right input!" << endl;
-									}
-									// break;
+						Class = tolower(Class);
+						if (Class == 'e') {
+							bool o = true;
+							while (o) {
+								cout << "Your price for this ticket would be  IDR1.500.000" << endl;
+								cout << "Are you sure want to choose economy class? [y/n]" << endl;
+								cin >> chooseEconomy; system ("cls");
+								chooseEconomy = tolower(chooseEconomy);
+								if (chooseEconomy == 'y') {
+									price = "1.500.000";
+									o = false;
+									q = false;
+									break;
 								}
-								// break;
-							}
-							else if (Class == 'v'){
-								// q = false;
-								bool p = true;
-								while (p) {
-									cout << "Your price for this ticket would be  IDR5.000.000" <<  endl;
-									cout << "Are you sure want to choose VIP class? [y/n]" << endl;
-									cin >> chooseVIP; system ("cls");
-									chooseVIP = tolower(chooseVIP);
-									if (chooseVIP == 'y') {
-										price = "5.000.000";
-										p = false;
-										q = false;
-										break;
-									}
-									else if (chooseVIP == 'n') {
-										p = false;
-										// break;
-									}
-									else {
-										p = true;
-										cout << "Please input the right input!" << endl;
-									}
-									// break;
+								else if (chooseEconomy == 'n'){
+									o = false;
 								}
-								// break;
-							}
-							else {
-								q = true;
-								cout << "Please input the right input!" << endl;
+								else {
+									cout << "Please input the right input!" << endl;
+								}
 							}
 						}
+						else if (Class == 'v'){
+							bool p = true;
+							while (p) {
+								cout << "Your price for this ticket would be  IDR5.000.000" <<  endl;
+								cout << "Are you sure want to choose VIP class? [y/n]" << endl;
+								cin >> chooseVIP; system ("cls");
+								chooseVIP = tolower(chooseVIP);
+								if (chooseVIP == 'y') {
+									price = "5.000.000";
+									p = false;
+									q = false;
+									break;
+								}
+								else if (chooseVIP == 'n') {
+									p = false;
+								}
+								else {
+									p = true;
+									cout << "Please input the right input!" << endl;
+								}
+							}
+						}
+						else {
+							q = true;
+							cout << "Please input the right input!" << endl;
+						}
+					}
 					
 					//The Summarry
 					cout << "Here are the data of your ticket!" << endl;
@@ -456,5 +443,6 @@ int main ()
 		}
 	}while(again == 'y' || again == 'Y');
 		cout << "Thank you for using us!" << endl;
-		
+	
+	return 0;
 }
