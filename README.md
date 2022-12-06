@@ -14,7 +14,10 @@ int main ()
 	char chooseVIP;
 	char ticketClass;
 	char Class;
-	int chooseLeague, chooseLaLigaMatch, choosePremiereMatch, chooseItaliaMatch;
+	int chooseLeague;
+	int chooseLaLigaMatch = 0;
+	int choosePremiereMatch =0;
+	int chooseItaliaMatch = 0;
 	
 	do{
 		cout << "************************************************************************************************************" 	<< endl;
@@ -420,10 +423,12 @@ int main ()
 					cout << "Date      : " << dateLaLiga << datePremiere << dateItalia << endl;
 					cout << "Time      : " << timeLaLiga << timePremiere << timeItalia << endl;
 					cout << "Price     : " << "IDR" << price << endl; 
-					cout << "Stadium   : " << LaLigaStadium[chooseLaLigaMatch] << PremiereStadium[choosePremiereMatch] << ItaliaStadium[chooseItaliaMatch];
-					continue;
+					cout << "Stadium   : " << LaLigaStadium[chooseLaLigaMatch] << PremiereStadium[choosePremiereMatch] << ItaliaStadium[chooseItaliaMatch] << endl;
 					
-					cout << "Do you want to order the ticket again? (y/n)"; cin >> again; system ("cls");
+					
+					cout << "\n" << "Do you want to order the ticket again? (y/n)"; 
+					cin >> again; 
+					system ("cls");
 			}
 			else if (order == 'n') {
 				i = false;
